@@ -2,7 +2,6 @@ const fs = require('fs');
 const pool = require('../lib/utils/pool');
 const request = require('supertest');
 const app = require('../lib/app');
-const { getDefaultSettings } = require('http2');
 
 describe('disc-golf-tracker-be routes', () => {
   beforeEach(() => {
