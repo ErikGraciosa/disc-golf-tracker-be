@@ -5,8 +5,8 @@ const app = require('../lib/app');
 const Round = require('../lib/models/Round');
 
 describe('disc-golf-tracker-be routes', () => {
-  beforeEach(() => {
-    pool.query(fs.readFileSync('./sql/setup.sql', 'utf-8'));
+  beforeEach(async() => {
+    await pool.query(fs.readFileSync('./sql/setup.sql', 'utf-8'));
 
     return Round.createRound({
       date: String(Date.now()),
